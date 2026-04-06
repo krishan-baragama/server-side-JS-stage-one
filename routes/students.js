@@ -9,3 +9,9 @@ router.put('/students/:id', studentsController.update);
 router.delete('/students/:id', studentsController.remove);
 
 module.exports = router;
+
+import authMiddleware from "../middleware/auth.js"
+
+router.post("/", authMiddleware, studentsController.create)
+router.put("/:id", authMiddleware, studentsController.update)
+router.delete("/:id", authMiddleware, studentsController.remove)
