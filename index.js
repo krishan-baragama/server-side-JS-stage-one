@@ -15,7 +15,7 @@ const app = express()
 const port = 3000
 
 // Middleware
-app.use(cors())
+// app.use(cors())
 app.use(express.json())
 
 // GET /
